@@ -1,3 +1,10 @@
+# Special Data
+/log
+/my_db
+/automotive/node_modules
+/dockerize/*
+# /src/main/resources/application.properties
+
 HELP.md
 target/
 !.mvn/wrapper/maven-wrapper.jar
