@@ -15,7 +15,7 @@ import java.util.Date;
 @Builder
 @Entity
 @Table(name = "credit_cards")
-public class CreditCardEntity extends BaseEntity {
+public class CreditCard extends BaseEntity {
 
     private String bankName;
     private String creditCardNumber;

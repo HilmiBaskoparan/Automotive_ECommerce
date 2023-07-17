@@ -13,7 +13,7 @@ import lombok.NoArgsConstructor;
 @Builder
 @Entity
 @Table(name = "basket")
-public class BasketEntity extends BaseEntity {
+public class Basket extends BaseEntity {
 
     private String productName;
     private int amount;

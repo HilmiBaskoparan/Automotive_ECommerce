@@ -7,19 +7,18 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.Date;
+
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
 @Entity
-@Table(name = "orders")
-public class OrderEntity extends BaseEntity {
+@Table(name = "user_logs")
+public class UserLog extends BaseEntity {
 
-    private String productName;
-    private int amount;
-    private double price;
-    private String address;
-    private String cargoName;
-    //private CreditCard CreditCard;
-    //private User User;
+    //private User user;
+    private String logDescription;
+    private Date loginDate;
+    private Date logoutDate;
 }

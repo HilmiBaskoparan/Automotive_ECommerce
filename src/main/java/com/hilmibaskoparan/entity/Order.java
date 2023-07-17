@@ -12,11 +12,14 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Builder
 @Entity
-@Table(name = "products")
-public class ProductEntity extends BaseEntity {
+@Table(name = "orders")
+public class Order extends BaseEntity {
 
     private String productName;
-    private String description;
+    private int amount;
     private double price;
-    private int stock;
+    private String address;
+    private String cargoName;
+    //private CreditCard CreditCard;
+    //private User User;
 }

@@ -15,7 +15,7 @@ import java.util.Date;
 @Builder
 @Entity
 @Table(name = "users")
-public class UserEntity extends BaseEntity implements Serializable {
+public class User extends BaseEntity implements Serializable {
 
     public static final Long serialVersionUID = 1L;
 
