@@ -1,7 +1,6 @@
 package com.hilmibaskoparan.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -17,10 +16,17 @@ import java.util.Date;
 @Table(name = "credit_cards")
 public class CreditCard extends BaseEntity {
 
-    private String bankName;
-    private String creditCardNumber;
-    //private User User;
-    // private User user.getName() + user.getUsername()
+    @Column(nullable = false)
+    private String cardName;
+
+    @Column(nullable = false)
+    private String cardNumber;
+
+    @Column(nullable = false)
     private Date expirationDate;
-    //private int cvc;
+
+    @ManyToOne
+    @JoinColumn(name = "user_id", nullable = false)
+    private User user;
+
 }

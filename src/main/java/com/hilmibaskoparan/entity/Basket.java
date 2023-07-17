@@ -1,7 +1,6 @@
 package com.hilmibaskoparan.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -18,5 +17,8 @@ public class Basket extends BaseEntity {
     private String productName;
     private int amount;
     private double price;
-    //private User User;
+
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "user_id")
+    private User user;
 }

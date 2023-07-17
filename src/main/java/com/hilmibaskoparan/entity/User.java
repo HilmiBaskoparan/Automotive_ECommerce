@@ -8,6 +8,7 @@ import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
 import java.util.Date;
+import java.util.List;
 
 @Data
 @AllArgsConstructor
@@ -27,7 +28,16 @@ public class User extends BaseEntity implements Serializable {
     private String phone;
     private Boolean sex;
     private Date birthDate;
-    //private Date createdDate;
-    //private List<CreditCard> creditCards;
-    //private List<Order> orders;
+
+    @OneToOne(mappedBy = "user")
+    private Basket basket;
+
+    @OneToMany(mappedBy = "user")
+    private List<CreditCard> creditCards;
+
+    @OneToMany(mappedBy = "user")
+    private List<Order> orders;
+
+    @OneToMany(mappedBy = "user")
+    private List<UserLog> userLogs;
 }
