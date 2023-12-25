@@ -1,7 +1,10 @@
 package com.hilmibaskoparan.repository;
 
-import com.hilmibaskoparan.entity.Order;
-import org.springframework.data.repository.CrudRepository;
+import com.hilmibaskoparan.model.entity.Order;
+import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface OrderRepository extends CrudRepository<Order, Long> {
+import java.util.List;
+
+public interface OrderRepository extends JpaRepository<Order, Integer> {
+    List<Order> findByCustomerId(int id);
 }
