@@ -1,0 +1,18 @@
+package com.hilmibaskoparan.business.responses.productResponses;
+
+import java.util.List;
+
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+@Getter
+@Setter
+@NoArgsConstructor
+public class FindNewProductResponse {
+	private int id;
+	private String name;
+	private int quantity;
+	private double price;
+	List<String> url;
+}
