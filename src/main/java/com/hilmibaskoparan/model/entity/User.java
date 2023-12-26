@@ -1,18 +1,14 @@
 package com.hilmibaskoparan.model.entity;
 
 import jakarta.persistence.*;
-import jakarta.validation.constraints.Size;
 import lombok.*;
 
-import javax.management.relation.Role;
-import java.io.Serializable;
-import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
+@Entity
 @Table(name = "users", uniqueConstraints = { @UniqueConstraint(columnNames = "user_name"),
         @UniqueConstraint(columnNames = "email") })
-@Entity
 @Data
 @EqualsAndHashCode(callSuper = false)
 @NoArgsConstructor
@@ -49,7 +45,6 @@ public class User extends BaseEntity {
         this.password = password;
         this.email = email;
     }
-
 
     @OneToMany(mappedBy = "user")
     private List<CreditCard> creditCards;

@@ -29,9 +29,16 @@ public class Product extends BaseEntity {
     private int quantity;
 
     @OneToMany(mappedBy = "product", fetch = FetchType.LAZY)
-    Set<ShoppingCardItem> shoppingCardItemSet;
-
+    Set<ShoppingCardItem> shoppingCardItems;
 
     @OneToMany(mappedBy = "product",fetch = FetchType.LAZY)
     List<OrderItem> orderItems;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "category_id")
+    private Category category;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "brand_id")
+    private Brand brand;
 }
