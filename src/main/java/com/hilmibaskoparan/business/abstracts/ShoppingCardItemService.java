@@ -7,14 +7,14 @@ import java.util.List;
 
 public interface ShoppingCardItemService {
 
-    public ShoppingCardItem addShoppingCartItemService(ShoppingCardItem shoppingCardItem);
+    public ShoppingCardItem addShoppingCardItemService(ShoppingCardItem shoppingCardItem);
 
-    public ShoppingCardItem updateShoppingCartItemService(ShoppingCardItem shoppingCardItem);
+    public ShoppingCardItem updateShoppingCardItemService(ShoppingCardItem shoppingCardItem);
 
     public List<ShoppingCard> findByCustomerId(int customerId);
 
-    public void deleteShoppingCartItem(int shoppingCartItemId);
+    public void deleteShoppingCardItem(int shoppingCardItemId);
 
-    public void resetShoppingCartItem(int shoppingCartId);
+    public void resetShoppingCardItem(int shoppingCardId);
 
 }

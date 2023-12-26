@@ -9,6 +9,6 @@ import lombok.Data;
 public class CreateOrderRequest {
 
     @NotNull
-    private int shoppingCartId;
+    private int shoppingCardId;
 
 }

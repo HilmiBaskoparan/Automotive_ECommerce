@@ -7,7 +7,7 @@ import lombok.Setter;
 @Getter
 @Setter
 @NoArgsConstructor
-public class CreateCreditCartResponse {
+public class CreateCreditCardResponse {
 
 	private int id;
 	

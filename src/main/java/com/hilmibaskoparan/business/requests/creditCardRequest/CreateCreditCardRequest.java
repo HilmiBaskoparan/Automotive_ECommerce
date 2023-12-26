@@ -10,7 +10,7 @@ import org.hibernate.validator.constraints.CreditCardNumber;
 @Getter
 @Setter
 @NoArgsConstructor
-public class CreateCreditCartRequest {
+public class CreateCreditCardRequest {
 
     @NotBlank
     private String cardHoldername;

@@ -6,7 +6,7 @@ import lombok.NoArgsConstructor;
 
 @Data
 @NoArgsConstructor
-public class CreateShoppingCartRequest {
+public class CreateShoppingCardRequest {
 
     @NotNull
     private int customerId;

@@ -19,5 +19,5 @@ public class PaymentRequest {
     @NotNull
     private BigDecimal totalAmount;
 
-    private int creditCartId;
+    private int creditCardId;
 }

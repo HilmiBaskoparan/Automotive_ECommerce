@@ -7,5 +7,5 @@ import java.util.List;
 
 public interface ShoppingCardItemRepository extends JpaRepository<ShoppingCardItem, Integer> {
 
-    List<ShoppingCardItem> findByShoppingCartCustomerId(int customerId);
+    List<ShoppingCardItem> findByShoppingCardCustomerId(int customerId);
 }

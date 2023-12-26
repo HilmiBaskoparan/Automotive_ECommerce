@@ -1,19 +1,20 @@
-package com.hilmibaskoparan.business.responses.couponResponses;
+package com.hilmibaskoparan.business.responses.shoppingCardResponses;
 
 import java.math.BigDecimal;
 import java.util.List;
 
-import com.hilmibaskoparan.business.responses.shoppingCardResponses.ShoppingCardItemDto;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-
 @Data
 @NoArgsConstructor
-public class CouponApplyResponse {
+public class CreateShoppingCardResponse {
 
 	private BigDecimal totalAmount;
 	private BigDecimal discountedTotalAmount;
 
 	List<ShoppingCardItemDto> shoppingCardItemDtos;
+
+
+
 }

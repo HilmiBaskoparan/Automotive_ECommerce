@@ -1,4 +1,4 @@
-package com.hilmibaskoparan.business.responses.shoppingCartResponses;
+package com.hilmibaskoparan.business.responses.shoppingCardResponses;
 
 import java.math.BigDecimal;
 import java.util.List;
