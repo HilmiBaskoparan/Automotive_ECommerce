@@ -13,5 +13,5 @@ public interface BrandService {
 
     Brand findById(int brandId);
 
-    CreateBrandResponse addBrand(CreateBrandRequest createBrandRquest);
+    CreateBrandResponse addBrand(CreateBrandRequest createBrandRequest);
 }
