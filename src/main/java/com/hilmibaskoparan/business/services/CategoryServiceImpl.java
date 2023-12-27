@@ -11,10 +11,12 @@ import com.hilmibaskoparan.model.entity.Brand;
 import com.hilmibaskoparan.model.entity.Category;
 import com.hilmibaskoparan.repository.CategoryRepository;
 import jakarta.transaction.Transactional;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.stream.Collectors;
 
+@Service
 public class CategoryServiceImpl implements CategoryService {
 
     private final CategoryRepository categoryRepository;
