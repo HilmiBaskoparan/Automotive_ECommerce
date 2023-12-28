@@ -191,6 +191,14 @@
 			<optional>true</optional>
 		</dependency>
 
+		<!-- CLOUDINARY -->
+		<dependency>
+			<groupId>com.cloudinary</groupId>
+			<artifactId>cloudinary-http44</artifactId>
+			<version>1.31.0</version>
+		</dependency>
+		<!-- CLOUDINARY END-->
+
 		<!--  json web token JWT-->
 		<!-- <dependency>
              <groupId>io.jsonwebtoken</groupId>
