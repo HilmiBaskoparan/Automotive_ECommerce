@@ -1,5 +1,6 @@
 package com.hilmibaskoparan.business.abstracts;
 
+import com.hilmibaskoparan.business.requests.productRequest.AddImageForProductRequest;
 import com.hilmibaskoparan.business.requests.productRequest.CreateProductRequest;
 import com.hilmibaskoparan.business.responses.PaginatedGenericResponse;
 import com.hilmibaskoparan.business.responses.productResponses.*;
@@ -12,6 +13,8 @@ import java.util.Optional;
 public interface ProductService {
 
     public CreateProductResponse addProduct(CreateProductRequest createProductRequest, MultipartFile file);
+
+    public AddImageForProductResponse addImageForProduct(AddImageForProductRequest addImageForProductRequest, MultipartFile file);
 
     public PaginatedGenericResponse<GetAllProductResponse> getAll(String keyword, int size, int page,
                                                                   BigDecimal minPrice, BigDecimal maxPrice, Optional<String> sortDirection);
