@@ -31,6 +31,7 @@ public class Product extends BaseEntity {
     @OneToMany(mappedBy = "product", fetch = FetchType.LAZY)
     Set<ShoppingCardItem> shoppingCardItems;
 
+
     @OneToMany(mappedBy = "product",fetch = FetchType.LAZY)
     List<OrderItem> orderItems;
 
@@ -41,4 +42,7 @@ public class Product extends BaseEntity {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "brand_id")
     private Brand brand;
+
+    @OneToMany(mappedBy = "product", fetch = FetchType.LAZY)
+    List<Image> images;
 }
