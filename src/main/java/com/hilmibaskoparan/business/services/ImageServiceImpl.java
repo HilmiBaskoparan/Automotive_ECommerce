@@ -1,5 +1,6 @@
 package com.hilmibaskoparan.business.services;
 
+import com.cloudinary.Cloudinary;
 import com.cloudinary.utils.ObjectUtils;
 import com.hilmibaskoparan.business.abstracts.ImageService;
 import com.hilmibaskoparan.model.entity.Image;
@@ -8,12 +9,11 @@ import com.hilmibaskoparan.repository.ImageRepository;
 import jakarta.transaction.Transactional;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
-import com.cloudinary.Cloudinary;
 
 import java.io.IOException;
 import java.util.Map;
 
-@Service
+//@Service
 public class ImageServiceImpl implements ImageService {
 
     private final ImageRepository imageRepository;
