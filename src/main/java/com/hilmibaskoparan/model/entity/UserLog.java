@@ -1,4 +1,4 @@
-package com.hilmibaskoparan.entity;
+package com.hilmibaskoparan.model.entity;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.JoinColumn;
