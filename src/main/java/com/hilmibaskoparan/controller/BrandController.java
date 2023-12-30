@@ -21,8 +21,7 @@ public class BrandController {
     @GetMapping("/brands/findByCategoryId")
     public List<FindBrandByCategoryIdResponse> findByCategoryId(@RequestParam int categoryId) {
         return brandService.findByCategoryId(categoryId);
-
-    };
+    }
 
     @PostMapping("/brands")
     public CreateBrandResponse addBrand(@RequestBody CreateBrandRequest createBrandRequest) {

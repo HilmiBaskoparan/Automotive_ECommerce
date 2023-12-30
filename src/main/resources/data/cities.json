@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "name": "Adana",
+    "postalCode": "01000",
+    "country": {
+      "id": 1,
+      "name": "Turkey",
+      "isoCode": "TR"
+    }
+  },
+  {
+    "id": 6,
+    "name": "Ankara",
+    "postalCode": "0600",
+    "country": {
+      "id": 1,
+      "name": "Turkey",
+      "isoCode": "TR"
+    }
+  },
+  {
+    "id": 16,
+    "name": "Bursa",
+    "postalCode": "16000",
+    "country": {
+      "id": 1,
+      "name": "Turkey",
+      "isoCode": "TR"
+    }
+  },
+  {
+    "id" : 34,
+    "name": "İstanbul",
+    "postalCode": "34000",
+    "country": {
+      "id": 1,
+      "name": "Turkey",
+      "isoCode": "TR"
+    }
+  },
+  {
+    "id": 35,
+    "name": "İzmir",
+    "postalCode": "35000",
+    "country": {
+      "id": 1,
+      "name": "Turkey",
+      "isoCode": "TR"
+    }
+  },
+  {
+    "id": 98,
+    "name": "New York",
+    "postalCode": "10045",
+    "country": {
+      "id": 15,
+      "name": "United States",
+      "isoCode": "US"
+    }
+  },
+  {
+    "id": 99,
+    "name": "Washington",
+    "postalCode": "4586",
+    "country": {
+      "id": 15,
+      "name": "United States",
+      "isoCode": "US"
+    }
+  }
+]

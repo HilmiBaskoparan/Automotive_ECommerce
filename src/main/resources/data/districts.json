@@ -1,0 +1,58 @@
+[
+  {
+    "name": "Ceyhan",
+    "city": {
+      "id": 1,
+      "name": "Adana",
+      "postalCode": "01920"
+    }
+  },
+  {
+    "name": "Çankaya",
+    "city": {
+      "id": 6,
+      "name": "Ankara",
+      "postalCode": "06530"
+    }
+  },
+  {
+    "name": "Gemlik",
+    "city": {
+      "id": 16,
+      "name": "Bursa",
+      "postalCode": "16600"
+    }
+  },
+  {
+    "name": "Kadıköy",
+    "city": {
+      "id": 34,
+      "name": "Istanbul",
+      "postalCode": "34734"
+    }
+  },
+  {
+    "name": "Bornova",
+    "city": {
+      "id": 35,
+      "name": "İzmir",
+      "postalCode": "35030"
+    }
+  },
+  {
+    "name": "Manhattan",
+    "city": {
+      "id": 98,
+      "name": "New York",
+      "postalCode": "10045"
+    }
+  },
+  {
+    "name": "Brooklyn",
+    "city": {
+      "id": 98,
+      "name": "New York",
+      "postalCode": "10045"
+    }
+  }
+]

@@ -1,0 +1,97 @@
+[
+  {
+    "id": 1,
+    "name": "Turkey",
+    "isoCode": "TR"
+  },
+  {
+    "id": 2,
+    "name": "China",
+    "isoCode": "CN"
+  },
+  {
+    "id": 3,
+    "name": "Brazil",
+    "isoCode": "BR"
+  },
+  {
+    "id": 4,
+    "name": "Senegal",
+    "isoCode": "SN"
+  },
+  {
+    "id": 5,
+    "name": "Indonesia",
+    "isoCode": "ID"
+  },
+  {
+    "id": 6,
+    "name": "Philippines",
+    "isoCode": "PH"
+  },
+  {
+    "id": 7,
+    "name": "Poland",
+    "isoCode": "PL"
+  },
+  {
+    "id": 8,
+    "name": "Syria",
+    "isoCode": "SY"
+  },
+  {
+    "id": 9,
+    "name": "Russia",
+    "isoCode": "RU"
+  },
+  {
+    "id": 10,
+    "name": "Greece",
+    "isoCode": "GR"
+  },
+  {
+    "id": 11,
+    "name": "Ukraine",
+    "isoCode": "UA"
+  },
+  {
+    "id": 12,
+    "name": "Sweden",
+    "isoCode": "SE"
+  },
+  {
+    "id": 13,
+    "name": "Belgium",
+    "isoCode": "BE"
+  },
+  {
+    "id": 14,
+    "name": "France",
+    "isoCode": "FR"
+  },
+  {
+    "id": 15,
+    "name": "United States",
+    "isoCode": "US"
+  },
+  {
+    "id": 16,
+    "name": "Japan",
+    "isoCode": "JP"
+  },
+  {
+    "id": 17,
+    "name": "Iran",
+    "isoCode": "IR"
+  },
+  {
+    "id": 18,
+    "name": "Germany",
+    "isoCode": "DE"
+  },
+  {
+    "id": 19,
+    "name": "Portugal",
+    "isoCode": "PT"
+  }
+]
