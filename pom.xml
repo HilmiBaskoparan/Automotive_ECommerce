@@ -191,6 +191,14 @@
 			<optional>true</optional>
 		</dependency>
 
+		<!-- JSON WEB TOKEN - JWT -->
+		<dependency>
+			<groupId>io.jsonwebtoken</groupId>
+			<artifactId>jjwt</artifactId>
+			<version>0.9.1</version>
+		</dependency>
+		<!-- JWT END -->
+
 		<!-- CLOUDINARY -->
 		<dependency>
 			<groupId>com.cloudinary</groupId>
@@ -198,13 +206,6 @@
 			<version>1.33.0</version>
 		</dependency>
 		<!-- CLOUDINARY END-->
-
-		<!--  json web token JWT-->
-		<!-- <dependency>
-             <groupId>io.jsonwebtoken</groupId>
-             <artifactId>jjwt</artifactId>
-             <version>0.9.1</version>
-         </dependency>-->
 
 		<!--mail send-->
 		<!--<dependency>
