@@ -10,7 +10,7 @@ import java.time.Instant;
 @Data
 @Table(name="refresh_tokens")
 @EqualsAndHashCode(callSuper = false)
-public class RefreshToken {
+public class RefreshToken extends BaseEntity {
 
     @OneToOne
     @JoinColumn(name = "user_id" ,referencedColumnName = "id")

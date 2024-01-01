@@ -25,7 +25,7 @@ public class EmailServiceImpl implements EmailService {
     private final UserRepository userRepository;
     private final ShoppingCardService shoppingCardService;
 
-    @Value("app.baseUrl")
+    //@Value("app.baseUrl")
     private String baseUrl;
 
     public EmailServiceImpl(JavaMailSender javaMailSender, ConfirmationTokenRepository confirmationTokenRepository, UserRepository userRepository, ShoppingCardService shoppingCardService) {

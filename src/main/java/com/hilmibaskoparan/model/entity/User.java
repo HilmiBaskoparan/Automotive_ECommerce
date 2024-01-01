@@ -40,10 +40,14 @@ public class User extends BaseEntity {
     @Column(name = "account_non_locked")
     private boolean accountNonLocked = true;
 
+    @Enumerated(EnumType.STRING)
+    private AuthProvider provider;
+
     public User(String username, String password, String email) {
         this.username = username;
         this.password = password;
         this.email = email;
+        this.provider = AuthProvider.LOCAL;
     }
 
     @OneToMany(mappedBy = "user")
@@ -55,5 +59,16 @@ public class User extends BaseEntity {
     @ManyToMany(fetch = FetchType.EAGER)
     @JoinTable(name = "user_roles", joinColumns = @JoinColumn(name = "user_id"), inverseJoinColumns = @JoinColumn(name = "role_id"))
     private List<Role> roles = new ArrayList<>();
+
+    @OneToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "refresh_token_id", referencedColumnName = "id")
+    public RefreshToken refreshToken;
+
+    @OneToOne(mappedBy = "user", fetch = FetchType.LAZY)
+    private EmailConfirmationToken emailConfirmationToken;
+
+    public boolean getAccountNonLocked() {
+        return accountNonLocked;
+    }
 
 }
