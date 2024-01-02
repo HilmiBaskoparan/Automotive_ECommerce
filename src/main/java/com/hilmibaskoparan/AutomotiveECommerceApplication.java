@@ -1,14 +1,17 @@
 package com.hilmibaskoparan;
 
+import com.hilmibaskoparan.config.AppProperties;
 import jakarta.annotation.PostConstruct;
 import org.springframework.boot.SpringApplication;
-import org.springframework.boot.actuate.autoconfigure.security.servlet.ManagementWebSecurityAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration;
+import org.springframework.boot.context.properties.EnableConfigurationProperties;
+import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 import java.util.TimeZone;
 
-@SpringBootApplication(exclude = {SecurityAutoConfiguration.class, ManagementWebSecurityAutoConfiguration.class})
+@SpringBootApplication
+@EnableTransactionManagement
+@EnableConfigurationProperties(AppProperties.class)
 public class AutomotiveECommerceApplication {
 
 	@PostConstruct
