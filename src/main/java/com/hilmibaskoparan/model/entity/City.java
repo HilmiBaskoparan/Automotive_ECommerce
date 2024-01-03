@@ -25,7 +25,8 @@ public class City extends BaseEntity {
     @JoinColumn(name = "country_id")
     private Country country;
 
-    @OneToMany(fetch =  FetchType.LAZY,mappedBy = "city")
+    @OneToMany
+    @JoinColumn(name = "city_id")
     private List<District> districts;
 
     @OneToMany(fetch = FetchType.LAZY,mappedBy = "city")
