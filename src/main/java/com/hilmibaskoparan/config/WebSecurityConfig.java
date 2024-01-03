@@ -14,7 +14,12 @@ import org.springframework.security.config.annotation.authentication.builders.Au
 import org.springframework.security.config.annotation.method.configuration.EnableMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
+import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.security.web.SecurityFilterChain;
+import org.springframework.security.web.access.channel.ChannelProcessingFilter;
+import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
+import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
 import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 import org.springframework.web.filter.CorsFilter;
@@ -59,5 +64,30 @@ public class WebSecurityConfig {
         config.addAllowedHeader("*"); // Tüm headerlara izin vermek için "*"
         source.registerCorsConfiguration("/**", config);
         return new CorsFilter(source);
+    }
+
+    @Bean()
+    public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
+        http.csrf().disable().exceptionHandling().authenticationEntryPoint(unauthorizedHandler).and()
+                .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS).and()
+                .authorizeHttpRequests((request) -> request
+                        .requestMatchers("/api/v1/products/**", "/api/v1/brands/**", "/api/v1/cities/**",
+                                "/api/v1/email/**", "/api/v1/countries/**", "/api/v1/coupons/**",
+                                "/api/v1/districts/**","/api/v1/payments/retrieveCheckoutRequest",
+                                "/api/v1/auth/confirm-account"
+                        )
+                        .permitAll().requestMatchers("/api/v1/categories/**").permitAll()
+                        .requestMatchers("/v3/api-docs/**", "/swagger-ui/**").permitAll()
+                        .requestMatchers(new AntPathRequestMatcher("/h2-console/**")).permitAll()
+                        .requestMatchers("/api/v1/auth/login").permitAll().requestMatchers("/api/v1/auth/register")
+                        .permitAll().requestMatchers("/api/v1/auth/refresh-token").permitAll().anyRequest()
+                        .authenticated());
+
+        http.headers().frameOptions().disable();
+
+        http.addFilterBefore(authenticationJwtTokenFilter(), UsernamePasswordAuthenticationFilter.class);
+        http.addFilterBefore(corsFilter(), ChannelProcessingFilter.class);
+        return http.build();
+
     }
 }
