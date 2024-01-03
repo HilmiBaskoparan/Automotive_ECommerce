@@ -11,9 +11,8 @@ import com.hilmibaskoparan.business.responses.productResponses.GetAllProductResp
 import com.hilmibaskoparan.core.mappers.ModelMapperService;
 import com.hilmibaskoparan.model.entity.*;
 import com.hilmibaskoparan.repository.OrderRepository;
-import org.apache.commons.lang3.reflect.MethodUtils;
+import com.hilmibaskoparan.util.MethodUtils;
 import org.springframework.stereotype.Service;
-import org.thymeleaf.util.DateUtils;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
@@ -47,7 +46,7 @@ public class OrderServiceImpl implements OrderService {
         Customer customer = shoppingCard.getCustomer();
 
         Order order = Order.builder().customer(customer).orderItems(orderItems).orderStatus(OrderStatus.PREPARING)
-                .totalAmount(shoppingCard.getTotalAmount()).orderDate(DateUtils.createNow().getTime()).build();
+                .totalAmount(shoppingCard.getTotalAmount()).orderDate(MethodUtils.getCurrentTimeStamp()).build();
 
         if (discountCode != null) {
             order.setCoupon(couponService.findByCode(discountCode));
