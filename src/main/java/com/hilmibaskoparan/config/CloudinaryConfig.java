@@ -2,20 +2,20 @@ package com.hilmibaskoparan.config;
 
 import com.cloudinary.Cloudinary;
 import com.cloudinary.utils.ObjectUtils;
-import lombok.Value;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 //@Configuration
 public class CloudinaryConfig {
 
-    //@Value(staticConstructor = "cloudinary.cloud_name")
+    @Value("cloudinary.cloud_name")
     private String cloudName;
 
-    //@Value(staticConstructor = "cloudinary.api_key")
+    @Value("cloudinary.api_key")
     private String apiKey;
 
-    //@Value(staticConstructor = "cloudinary.api_secret")
+    @Value("cloudinary.api_secret")
     private String apiSecret;
 
     @Bean

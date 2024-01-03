@@ -8,7 +8,7 @@ import com.hilmibaskoparan.repository.ConfirmationTokenRepository;
 import com.hilmibaskoparan.repository.UserRepository;
 import jakarta.mail.MessagingException;
 import jakarta.mail.internet.MimeMessage;
-import lombok.Value;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.mail.javamail.MimeMessageHelper;
 import org.springframework.stereotype.Service;
@@ -25,7 +25,7 @@ public class EmailServiceImpl implements EmailService {
     private final UserRepository userRepository;
     private final ShoppingCardService shoppingCardService;
 
-    //@Value("app.baseUrl")
+    @Value("app.baseUrl")
     private String baseUrl;
 
     public EmailServiceImpl(JavaMailSender javaMailSender, ConfirmationTokenRepository confirmationTokenRepository, UserRepository userRepository, ShoppingCardService shoppingCardService) {
