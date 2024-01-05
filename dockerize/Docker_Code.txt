@@ -1,0 +1,18 @@
+./mvnw clean package -DskipTests
+
+docker-compose up
+docker-compose up -d
+docker-compose down
+docker ps
+
+
+#################################################
+# Dockerfile üzerinden Image oluştur
+docker build .
+
+# ımage list
+docker image ls
+
+docker image prune
+
+docker run -p 2222:2222 imageAdi
