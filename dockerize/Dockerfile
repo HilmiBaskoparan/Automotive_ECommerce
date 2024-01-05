@@ -9,5 +9,5 @@ VOLUME /tmp
 ARG JAR_FILE_PATH=Automotive_ECommerce-0.0.1-SNAPSHOT.jar
 ADD ${JAR_FILE_PATH} auto.jar
 ENTRYPOINT ["java", "-jar", "/auto.jar"]
-EXPOSE 4040 9999
+EXPOSE 8080 9999
 CMD ["cmd 1"]

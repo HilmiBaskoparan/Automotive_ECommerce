@@ -6,4 +6,4 @@ services:
     restart: always
     build: ./
     ports:
-      - "4040:4040"
+      - "8080:8080"
