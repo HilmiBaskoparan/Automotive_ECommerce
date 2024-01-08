@@ -1,7 +1,8 @@
+// rcc
 import React, { Component } from 'react'
 
 // CLASS Component
-export default class Header extends Component {
+export default class Footer extends Component {
     constructor(props) {
         super(props);
 
@@ -26,7 +27,7 @@ export default class Header extends Component {
             // <div>Header</div>
             //<React.Fragment>Header</React.Fragment>
             <>
-                Header
+                Footer
             </>
         ) //end return
     } // end render
