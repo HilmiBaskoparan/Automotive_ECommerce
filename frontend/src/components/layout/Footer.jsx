@@ -3,6 +3,10 @@ import React, { Component } from "react";
 
 // CLASS Component
 export default class Footer extends Component {
+
+  // Componentteki yeni isim
+  static displayName="Auto_Footer";
+  
   constructor(props) {
     super(props);
 

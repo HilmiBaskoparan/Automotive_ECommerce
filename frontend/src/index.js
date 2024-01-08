@@ -7,7 +7,9 @@ import RouterMain from "./components/layout/RouterMain";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <RouterMain />
+    <React.Fragment>
+      <RouterMain/>
+    </React.Fragment>
   </React.StrictMode>
 );
 

@@ -1,8 +1,15 @@
 // rcc
 import React, { Component } from "react";
 
+// css
+import './style.css'
+
 // CLASS Component
 export default class Main extends Component {
+
+  // Componentteki yeni isim
+  static displayName = "Auto_Main"
+
   constructor(props) {
     super(props);
 

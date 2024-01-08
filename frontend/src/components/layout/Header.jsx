@@ -11,6 +11,10 @@ import FlagEnglish from "./img/flag/en.png";
 
 // CLASS Component
 export default class Header extends Component {
+
+  // Componentteki yeni isim
+  static displayName="Auto_Header"
+
   constructor(props) {
     super(props);
     //bind
