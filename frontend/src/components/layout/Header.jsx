@@ -4,6 +4,11 @@ import React, { Component } from 'react'
 // css
 import './style.css';
 
+// image
+import Logo from './img/logo.jpg'
+import FlagTurkish from './img/flag/tr.png'
+import FlagEnglish from './img/flag/en.png'
+
 // CLASS Component
 export default class Header extends Component {
     constructor(props) {
@@ -57,11 +62,11 @@ export default class Header extends Component {
               </button>
             </li>
             <li>
-              <img src="./img/flag/en.png" className="flag" alt="" />
+            <img src={FlagEnglish} className="flag" alt="" />
             </li>
             <li>
               {" "}
-              <img src="./img/flag/tr.png" className="flag" alt="" />
+              <img src={FlagTurkish} className="flag" alt="" />
             </li>
           </ul>
         </div>
@@ -208,7 +213,8 @@ export default class Header extends Component {
   >
     <div className="container">
       <a className="navbar-brand" href="#">
-        <img src="./img/logo.jpg" alt="it isn't showing logo" id="logo_id" />
+        {/* ./img/logo.jpg */}
+        <img src={Logo} alt="it isn't showing logo" id="logo_id" />
       </a>
       <button
         className="navbar-toggler d-lg-none"
