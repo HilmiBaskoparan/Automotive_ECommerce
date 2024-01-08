@@ -1,0 +1,402 @@
+/*
+Project Name: Automotive E-Commerce Web Site
+-Author: Hilmi Başkoparan
+-Version: v.1
+-Description: This is an e-commerce web site about automotive parts
+*/
+
+/* ##################################################### */
+/* ### ROOT ###*/
+:root {
+    --template-bg: rgb(248, 248, 240);
+}
+
+/* ##################################################### */
+/* ### COMMON PROPERTY ###*/
+* {
+    margin: 0;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 15px;
+}
+
+body {
+    font-family: 'Work Sans', sans-serif;
+    position: relative;
+    line-height: 1.7;
+    /* font-size: 2rem; */
+    /*10*2=20px*/
+    background-color: var(--template-bg);
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+}
+
+p {
+    margin: 0 2rem;
+    text-align: justify;
+    /* font-size: 1.5rem!important; */
+    opacity: .9;
+    font-weight: 400;
+}
+
+i {
+    font-size: 1.5rem;
+    /* color:rgba(162, 7, 252, 0.5); */
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    /* border-radius:50% 50%; profil image*/
+    border-radius: 5%;
+}
+
+img:hover {
+    cursor: pointer;
+    border: .1rem solid rgba(162, 7, 252, 0.5);
+    opacity: 0.9;
+    transition: 3s all;
+}
+
+.my_clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.icon_size {
+    font-size: 1.5rem;
+}
+
+
+.my_heading {
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: 2s all;
+    margin-bottom: 1.5rem;
+    font-size: 2.5rem;
+}
+
+.flag {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+/* ##################################################### */
+/* ### LINE CLAMP ###*/
+.line-clamp4 {
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+}
+
+.line-clamp6 {
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-line-clamp: 6;
+    -webkit-box-orient: vertical;
+}
+
+.line-clamp8 {
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-line-clamp: 8;
+    -webkit-box-orient: vertical;
+}
+
+.line-clamp10 {
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-line-clamp: 10;
+    -webkit-box-orient: vertical;
+}
+
+.line-clamp15 {
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-line-clamp: 15;
+    -webkit-box-orient: vertical;
+}
+
+/* ##################################################### */
+/* ### NAVBAR FIRST ###*/
+#navbar_first {
+    background-color: rgba(0, 0, 0, 1) !important;
+    color: white;
+    max-height: 3rem;
+    opacity: 0.9;
+}
+
+#navbar_first_left ul li {
+    display: inline-block;
+    padding-top: 1rem;
+}
+
+#navbar_first_right button {
+    color: red;
+
+}
+
+#navbar_first_right ul li {
+    display: inline-block;
+    padding-top: 1rem;
+    margin-right:-0.1rem
+}
+
+
+#navbar_first_right img {
+    border-radius: 50% 50%;
+    max-width: 200% !important;
+}
+
+/* ### NAVBAR SECOND ###*/
+#navbar_second {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    opacity: 1;
+}
+
+/* ### LOGO ### */
+#logo_id {
+    border-radius: 50% 50%;
+    width: 5.5rem;
+}
+
+/* ### SEARCH FOCUS ### */
+#tags {
+    background-color: #fff;
+    color: black;
+}
+
+#tags:focus {
+    width: 25rem;
+    transition: width 2.55s;
+    -webkit-transition: width 2.55s;
+    /*chrome,*/
+    -o-transition: width 2.55s;
+    /*opera,*/
+    background-color: black;
+    color: #fff;
+}
+
+/* ### DARK MODE*/
+.dark_mode {
+    background-color: black !important;
+    color: white !important;
+    /* arka taraf blur olur. */
+
+}
+
+/* ##################################################### */
+/* ### HEADER###*/
+header {
+    background-image: url('./img/car/car_repair.jpg');
+    background-size: cover;
+    background-position: 50% 50%;
+    /* height: 50rem; */
+    height: 80vh;
+    padding-top: 15rem;
+    z-index: -1;
+}
+
+header h1,
+h4 {
+    color: white;
+    text-transform: uppercase;
+}
+
+/* ##################################################### */
+/* ### MAIN###*/
+/* Common Property*/
+#store,
+#order,
+#about {
+    padding-top: 5rem;
+    height: 35rem;
+}
+
+.store_icon {
+    font-size: 6rem;
+    margin-bottom: 1rem;
+    box-shadow: 0.5px .5px .3px 1px rgba(0, 0, 0, 0.4);
+}
+
+.store_icon:hover {
+    cursor: pointer;
+}
+
+/* ### BAŞARILARIMIZ ###*/
+#order {
+    background-color: #0B5ED7;
+    color: white;
+}
+
+.order-header h3 {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.order-header p {
+    text-align: center;
+    text-transform: capitalize;
+    margin-bottom: 4rem;
+}
+
+.order_icon {
+    font-size: 4rem;
+    display: block;
+}
+
+#order .counter {
+    font-size: 2.2rem;
+    font-weight: bold;
+}
+
+/* ### BLOG ###*/
+#blog {
+    position: relative;
+}
+
+#blog::before {
+    position: absolute;
+    top: 0px;
+    right: 0;
+    bottom: 0;
+    left: 0px;
+    content: "";
+    background-image: url("./img/car/logo.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    opacity: 0.92;
+}
+
+#blog .container .row .col-md-3 .card .card-body h4 {
+    color: black;
+    text-align: center;
+}
+
+#blog .col-md-3 {
+    margin-bottom: 1rem;
+}
+
+.blog_date {
+    opacity: 0.6;
+    float: right;
+    margin-top: 0.8rem;
+}
+
+/* ### Contact ###*/
+#contact iframe {
+    width: 100%;
+    height: 40rem !important;
+}
+
+/* ##################################################### */
+/* ### FOOTER###*/
+footer {
+    width: auto;
+    background-color: black;
+    color: white;
+    padding: 1rem
+}
+
+#footer_copy_right {
+    height: 5rem;
+    padding: 2rem;
+}
+
+/* ##################################################### */
+/* ### BACK TOP###*/
+#back_top {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    padding: .5rem 2rem;
+    margin-right: 0.6rem;
+    margin-bottom: 0.6rem;
+    background-color: #0B5ED7;
+    color: white;
+    width: .6rem;
+}
+
+#back_top:hover {
+    background-color: white;
+    color: #0B5ED7;
+    opacity: 0.9;
+    transition: all 3s;
+}
+
+/* ##################################################### */
+/* ### MEDIA QUERY###*/
+/* 1<=X<=767 */
+@media screen and (min-width:1px) {
+    #store {
+        height: 70rem;
+    }
+
+    #order{
+        height: 50rem;
+    }
+
+    #tags {
+        width: 20rem;
+        background-color: black;
+        color: #0B5ED7;
+    }
+
+    #navbar_first_left ul li {
+        display: inline-block;
+    }
+
+    #navbar_first_right ul li {
+        display: inline-block;
+       font-size: 0.5rem;
+    }
+
+    footer .col-md-3 {
+        display: block;
+    }
+
+    footer {
+        height: 50rem;
+    }
+
+    footer h3,
+    p {
+        font-size: 1rem;
+    }
+}
+
+/* 768<=X<=??? */
+@media screen and (min-width:768px) {
+
+    #store,
+    #order,
+    #about {
+        height: 35rem;
+    }
+
+    #tags {
+        width: 100%;
+        background-color: #c0c4c9;
+        color: black;
+    }
+
+    footer {
+        height: 20rem;
+    }
+}
