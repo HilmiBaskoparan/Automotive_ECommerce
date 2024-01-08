@@ -5,7 +5,7 @@ import React, { Component } from 'react'
 import './style.css';
 
 // image
-import Logo from './img/logo.jpg'
+import Logo from './img/car/logo.jpg'
 import FlagTurkish from './img/flag/tr.png'
 import FlagEnglish from './img/flag/en.png'
 
