@@ -55,8 +55,15 @@ i {
 }
 
 img {
-    max-width: 100%;
+    max-width: 50%;
     height: auto;
+    /* border-radius:50% 50%; profil image*/
+    border-radius: 5%;
+}
+
+.img_car{
+    max-width: 381;
+    height: 160;
     /* border-radius:50% 50%; profil image*/
     border-radius: 5%;
 }

@@ -1,78 +1,104 @@
-import React, { useState, Component }  from "react";
+import React from "react";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
 
-// css
+// CSS
 import "./style.css";
 
-const [currentIndex, setCurrentIndex] = useState();
+// Images
+import logo from "./img/car/logo.jpg";
+import repair from "./img/car/car_repair.jpg";
 
-function handleChange(index) {
-  setCurrentIndex(index);
-}
 
-const imageData = [
-  {
-    label: "Image 1",
-    alt: "image1",
-    url: "./img/car/car_repair.jpg",
-  },
-  {
-    label: "Image 2",
-    alt: "image2",
-    url: "./img/car/logo.jpg",
-  },
-];
 
-const renderSlides = imageData.map((image) => (
-  <div key={image.alt}>
-    <img src={image.url} alt={image.alt} />
-    <p className="legend">{image.label}</p>
-  </div>
-));
 
-// CLASS Component
-export default class Main extends Component {
-  // Componentteki yeni isim
-  static displayName = "Auto_Main";
 
-  constructor(props) {
-    super(props);
+const Main = () => {
+  return (
+    <div>
+      <section className="hero">
+        <div className="hero__slider">
+          <div
+            id="carouselExampleIndicators"
+            className="carousel slide"
+            data-ride="carousel"
+          >
+            <ol className="carousel-indicators">
+              <li
+                data-target="#carouselExampleIndicators"
+                data-slide-to={0}
+                className="active"
+              />
+              <li data-target="#carouselExampleIndicators" data-slide-to={1} />
+            </ol>
 
-    //bind
+            <div className="carousel-inner">
+              {/* <div className="text-carousel">
+                <div className="">
+                  <h6>Summer Collection</h6>
+                  <h2>Fall - Winter Collections 2030</h2>
+                  <p>
+                    A specialist label creating luxury essentials. Ethically
+                  </p>
+                  <a href="#" className="primary-btn">
+                    Shop now <span className="arrow_right" />
+                  </a>
+                  <div className="hero__social">
+                    <a href="#">
+                      <i className="fa fa-facebook" />
+                    </a>
+                    <a href="#">
+                      <i className="fa fa-twitter" />
+                    </a>
+                    <a href="#">
+                      <i className="fa fa-pinterest" />
+                    </a>
+                    <a href="#">
+                      <i className="fa fa-instagram" />
+                    </a>
+                  </div>
+                </div>
+              </div> */}
+              <Carousel
+                autoPlay={true}
+                showThumbs={false}
+                showArrows={true}
+                interval={5000}
+                infiniteLoop={true}
+              >
+                <div className="carousel-item active">
+                  <img src={logo} alt="Fotoğraf Hatalı" className="img_car"/>
+                </div>
+                <div className="carousel-item active">
+                  <img src={repair} alt="Fotoğraf Hatalı" className="img_car"/>
+                </div>
+               
+              </Carousel>
+            </div>
+            {/* <a
+              className="carousel-control-prev"
+              href="#carouselExampleIndicators"
+              role="button"
+              data-slide="prev"
+            >
+              <span className="carousel-control-prev-icon" aria-hidden="true" />
+              <span className="sr-only">Previous</span>
+            </a>
 
-    //state
-    this.state = {};
+            <a
+              className="carousel-control-next bg-red"
+              href="#carouselExampleIndicators"
+              role="button"
+              data-slide="next"
+            >
+              <span className="carousel-control-next-icon" aria-hidden="true" />
+              <span className="sr-only">Next</span>
+            </a> */}
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+};
 
-    //bind
-  }
-
-  // CDM
-  componentDidMount() {}
-
-  // FUNCTION
-
-  //RENDER
-  render() {
-    //RETURN
-    return (
-      // <div>Header</div>
-      //<React.Fragment>Header</React.Fragment>
-      <>
-      <div className="app">
-      <Carousel
-  showArrows={true}
-  autoPlay={true}
-  infiniteLoop={true}
-  selectedItem={imageData[currentIndex]}
-  onChange={handleChange}
-  className="carousel-container"
->
-  {renderSlides}
-</Carousel>
-      </div>
-        
-      </>
-    ); //end return
-  } // end render
-} //end class
+export default Main;
