@@ -4,6 +4,7 @@ import Header from "../layout/Header";
 import HomePage from "./HomePage";
 import HomePageBanner from "./HomePageBanner";
 import Footer from "../layout/Footer";
+import HomePageBlogSection from "./HomePageBlogSection";
 
 // CLASS Component
 export default class RouterMain extends Component{
@@ -25,7 +26,8 @@ export default class RouterMain extends Component{
         <Header />
         <br />
         <HomePage />
-        <HomePageBanner></HomePageBanner>
+        <HomePageBanner />
+        <HomePageBlogSection />
         <br />
         <Footer />
       </>
