@@ -1,26 +1,19 @@
 // rcc
 import React, { Component } from "react";
-import Header from "./Header";
-import Main from "./Main";
-import Footer from "./Footer";
+import Header from "../layout/Header";
+import HomePage from "./HomePage";
+import HomePageBanner from "./HomePageBanner";
+import Footer from "../layout/Footer";
 
 // CLASS Component
-export default class RouterMain extends Component {
+export default class RouterMain extends Component{
   constructor(props) {
     super(props);
-
-    //bind
-
-    //state
     this.state = {};
 
-    //bind
   }
 
-  // CDM
   componentDidMount() {}
-
-  // FUNCTION
 
   //RENDER
   render() {
@@ -31,7 +24,8 @@ export default class RouterMain extends Component {
       <>
         <Header />
         <br />
-        <Main />
+        <HomePage />
+        <HomePageBanner></HomePageBanner>
         <br />
         <Footer />
       </>

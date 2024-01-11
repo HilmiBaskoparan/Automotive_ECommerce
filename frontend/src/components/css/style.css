@@ -210,7 +210,7 @@ img:hover {
 /* ##################################################### */
 /* ### HEADER###*/
 header {
-    background-image: url('./img/car/car_repair.jpg');
+    background-image: url('../../img/about.jpg');
     background-size: cover;
     background-position: 50% 50%;
     /* height: 50rem; */
@@ -284,7 +284,7 @@ h4 {
     bottom: 0;
     left: 0px;
     content: "";
-    background-image: url("./img/car/logo.jpg");
+    background-image: url("../../img/about.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;

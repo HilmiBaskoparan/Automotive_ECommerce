@@ -3,17 +3,14 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
 
 // CSS
-import "./style.css";
+import "../css/style.css";
 
 // Images
-import logo from "./img/car/logo.jpg";
-import repair from "./img/car/car_repair.jpg";
+import logo from "../../img/car/logo.jpg";
+import repair from "../../img/car/car_repair.jpg";
 
 
-
-
-
-const Main = () => {
+const HomePage = () => {
   return (
     <div>
       <section className="hero">
@@ -101,4 +98,4 @@ const Main = () => {
   );
 };
 
-export default Main;
+export default HomePage;

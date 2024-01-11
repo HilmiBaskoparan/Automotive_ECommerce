@@ -2,12 +2,12 @@
 import React, { Component } from "react";
 
 // css
-import "./style.css";
+import "../css/style.css";
 
 // image
-import Logo from "./img/car/logo.jpg";
-import FlagTurkish from "./img/flag/tr.png";
-import FlagEnglish from "./img/flag/en.png";
+import Logo from "../../img/car/logo.jpg";
+import FlagTurkish from "../../img/flag/tr.png";
+import FlagEnglish from "../../img/flag/en.png";
 
 // CLASS Component
 export default class Header extends Component {
